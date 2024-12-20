@@ -1,0 +1,86 @@
+/* 調整 body 的樣式來向下移動整個頁面內容 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 25px 0 0 0;  /* 添加頂部填充 */
+    background-color: #f4f4f4;
+    max-height: 100vh; /* 設置頁面的最大高度 */
+    overflow-y: auto;  /* 垂直滾動 */
+    overflow-x: auto;  /* 水平滾動 */
+}
+
+/* 表格樣式 */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;  /* 使表格水平居中 */
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加陰影效果 */
+    border-radius: 5px; /* 圓角 */
+    overflow: hidden; /* 防止超出邊界 */
+}
+
+/* 表格內容 */
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.course-cell:hover {
+    background-color: #ddd;
+    cursor: pointer; /* 增加滑鼠指標效果 */
+}
+
+/* 時鐘樣式 */
+#clock {
+    position: fixed;
+    top: 10px; /* 可調整至距離頁面頂部的距離 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* 確保時鐘顯示在最上層 */
+}
+/* 设置按钮的样式 */
+.map-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* 鼠标悬停时改变按钮颜色 */
+.map-btn:hover {
+    background-color: #0056b3;
+}

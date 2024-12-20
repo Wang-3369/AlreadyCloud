@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <link rel="stylesheet" href="/css/tool.css">
+    <link rel="stylesheet" href="/css/special.css">
+    
+    <style>
+        /* 左上角圓形樣式 */
+        #loginStatus {
+            position: fixed;
+            top: 20px;
+            left: 25px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: grey; /* 預設為灰色 */
+            z-index: 9999;
+        }
+        
+        /* 當用戶已登錄時，顯示綠色 */
+        .logged-in {
+            background-color: green !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <main class="container">
+        <div id="loginStatus"></div>
+
+        <!-- 折疊工具列 -->
+        <div class="collapsible-container">
+            <button class="collapsible-btn" id="toggleMenuBtn">≡</button>
+            <div class="collapsible-content" id="collapsibleMenu">
+                <a href="/login" class="btn">登入頁面</a>
+                <a href="/register" class="btn">註冊頁面</a>
+                <a href="/uploadClass" class="btn"id ="uploadClassLink" target="_blank" style="display: none;">上傳課程</a>
+                <a href="/report" class="btn" target="_blank">說明文件</a>
+                <a href="#" class="btn" id="logoutBtn" style="display: none;">登出</a>
+            </div>
+        </div>
+
+        <!-- 查詢表單區域 -->
+        <section class="form-container">
+            <form id="detailedSearchForm" class="search-form">
+                <div class="input-group">
+                    <input type="text" id="courseName" placeholder="課程名稱">
+                    <input type="text" id="courseCode" placeholder="課程代碼">
+                    <input type="text" id="courseTime" placeholder="課程時間">
+                    <input type="text" id="department" placeholder="學系">
+                    <input type="text" id="location" placeholder="教室">
+                </div>
+                <button type="button" id="searchButton" class="btn">查詢</button>
+            </form>
+        </section>
+
+        <!-- 查詢結果區域 -->
+        <header class="header">
+            <h1>查詢結果</h1>
+        </header>
+        <section>
+            <div class="table-container">
+                <table id="resultsTable" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>節數</th>
+                            <th>星期</th>
+                            <th>課程名稱</th>
+                            <th>課號</th>
+                            <th>開課單位</th>
+                            <th>教室位置</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+    <script src="/js/LoginRemind.js"></script>
+    <script src="/js/tool.js"></script>
+    <script src="/js/clock.js"></script>
+    <script src="/js/upload.js"></script>
+</body>
+</html>

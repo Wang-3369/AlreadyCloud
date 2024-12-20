@@ -1,0 +1,77 @@
+/* 表格容器：設置最大高度並啟用垂直滾動 */
+#resultsTable {
+    width: auto !important;  /* 確保寬度填滿父容器 */
+    max-height: 500px;  /* 設置最大高度 */
+    overflow-y: auto;  /* 啟用垂直滾動 */
+    display: block;    /* 使表格區域獨立滾動 */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 頁面主容器：啟用垂直滾動，保證在內容多時仍能滾動 */
+main.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;  /* 內容與頂部留空 */
+    max-height: 80vh;  /* 設置最大高度 */
+    overflow-y: auto;  /* 啟用垂直滾動 */
+    padding: 0 20px;  /* 内部留空 */
+}
+
+/* 表格容器樣式 */
+/* 使表格居中 */
+.table-container {
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.styled-table {
+    width: 80%;                /* 控制表格的宽度 */
+    border-collapse: collapse;
+    margin: 20px auto;         /* 水平居中表格 */
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-align: center;        /* 水平内容居中 */
+    border: 1px solid #dddddd;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    vertical-align: middle;    /* 垂直居中 */
+}
+
+.styled-table thead tr {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 12px; /* 设置滚动条宽度 */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 滚动条轨道背景色 */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滚动条的颜色 */
+    border-radius: 10px; /* 滚动条的圆角 */
+    border: 3px solid #f1f1f1; /* 滚动条的外边框 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* 鼠标悬停时的颜色 */
+}
