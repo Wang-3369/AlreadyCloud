@@ -4,7 +4,8 @@
     "description": "A simple authentication system with registration and login features.",
     "main": "app.js",
     "scripts": {
-      "start": "node app.js"
+      "start": "node app.js",
+      "build": "npm install"
     },
     "dependencies": {
       "bcrypt": "^5.1.0",
