@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 // 假设 db 已经在外部连接并传递过来
 const collectionName = 'password';
