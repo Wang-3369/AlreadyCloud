@@ -9,12 +9,12 @@ const getCoursesRoute = require('./routes/getCourses');
 const detailRoute = require('./routes/detail');
 const cookieParser = require('cookie-parser');
 const favicon = require('serve-favicon');
+require('dotenv').config();
 const app = express();
 const port = 3000;
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://s0970603655:sdClglqFKkKJVJhd@cluster0.rh8bh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
+const uri = process.env.uri;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
