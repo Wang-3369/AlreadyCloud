@@ -1,7 +1,7 @@
 {
     "name": "message",
     "version": "1.0.0",
-    "description": "A simple authentication system with registration and login features.",
+    "description": "OceanClassMap",
     "main": "app.js",
     "scripts": {
       "start": "node app.js",
@@ -15,7 +15,7 @@
       "mongoose": "^8.9.2",
       "serve-favicon": "^2.5.0"
     },
-    "author": "Your Name",
+    "author": "s0970603655",
     "license": "ISC"
   }
   
